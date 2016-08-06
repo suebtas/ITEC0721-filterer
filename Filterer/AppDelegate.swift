@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  Filterer
 //
-//
 
 import UIKit
 
