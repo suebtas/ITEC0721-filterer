@@ -10,17 +10,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     var filteredImage: UIImage?
     
+    @IBOutlet var zoomTapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet var imageView: UIImageView!
     
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     
     @IBOutlet var filterButton: UIButton!
+    @IBOutlet var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
+        zoomTapGestureRecognizer.numberOfTapsRequired = 2
     }
 
     // MARK: Share
@@ -117,6 +120,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: UIScrollViewDelegate
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imageView
+    }
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        UIView.animateWithDuration(0.4, animations: {()->Void in
+            self.scrollView.zoomScale *= 1.5
+        })
+            
+    
     }
 }
 
