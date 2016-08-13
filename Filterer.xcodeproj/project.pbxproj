@@ -26,7 +26,7 @@
 		4DC199A11BB201E100AA75E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC199A31BB201E100AA75E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
-		B50107B71D5F41AF0031A208 /* FilterRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterRed.swift; sourceTree = "<group>"; };
+		B50107B71D5F41AF0031A208 /* FilterRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterRed.swift; path = ../FilterRed.swift; sourceTree = "<group>"; };
 		B58D4A471D567173006DA7B3 /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +44,6 @@
 		4DC1998B1BB201E100AA75E7 = {
 			isa = PBXGroup;
 			children = (
-				B50107B71D5F41AF0031A208 /* FilterRed.swift */,
 				4DC199961BB201E100AA75E7 /* Filterer */,
 				4DC199951BB201E100AA75E7 /* Products */,
 			);
@@ -61,6 +60,7 @@
 		4DC199961BB201E100AA75E7 /* Filterer */ = {
 			isa = PBXGroup;
 			children = (
+				B50107B71D5F41AF0031A208 /* FilterRed.swift */,
 				4DC199971BB201E100AA75E7 /* AppDelegate.swift */,
 				4DC199991BB201E100AA75E7 /* ViewController.swift */,
 				B58D4A471D567173006DA7B3 /* PhotoView.swift */,
