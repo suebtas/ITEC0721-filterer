@@ -77,20 +77,20 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.10000000000000001" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="idX-dl-5Ke">
-                                <rect key="frame" x="-20" y="-20" width="640" height="596"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="aND-Em-4Dd" customClass="PhotoView" customModule="Filterer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
+                                        <rect key="frame" x="-20" y="-20" width="1280" height="853"/>
                                         <color key="backgroundColor" white="0.050000000000000003" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="idX-dl-5Ke" secondAttribute="leading" id="Xp3-jz-gHR"/>
-                                    <constraint firstItem="aND-Em-4Dd" firstAttribute="top" secondItem="idX-dl-5Ke" secondAttribute="top" id="a9a-SX-3Ut"/>
-                                    <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" id="gcs-lG-mOZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="aND-Em-4Dd" secondAttribute="bottom" id="zT2-VE-NeW"/>
+                                    <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="idX-dl-5Ke" secondAttribute="leading" constant="-20" id="Xp3-jz-gHR"/>
+                                    <constraint firstItem="aND-Em-4Dd" firstAttribute="top" secondItem="idX-dl-5Ke" secondAttribute="top" constant="-20" id="a9a-SX-3Ut"/>
+                                    <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" constant="-660" id="gcs-lG-mOZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="aND-Em-4Dd" secondAttribute="bottom" constant="-277" id="zT2-VE-NeW"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ooa-J0-NrO"/>
@@ -100,13 +100,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JNF-wb-wwY" secondAttribute="trailing" id="4Uj-nU-89n"/>
-                            <constraint firstItem="idX-dl-5Ke" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-20" id="ZVH-ph-jEW"/>
+                            <constraint firstItem="idX-dl-5Ke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N7S-eF-eD7"/>
+                            <constraint firstItem="idX-dl-5Ke" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ZVH-ph-jEW"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezb-a7-a7E"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNF-wb-wwY" secondAttribute="bottom" id="gS7-Xm-JhX"/>
                             <constraint firstItem="idX-dl-5Ke" firstAttribute="centerX" secondItem="JNF-wb-wwY" secondAttribute="centerX" id="pGm-r6-fdF"/>
                             <constraint firstItem="idX-dl-5Ke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-40" id="rcu-bU-hKf"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="idX-dl-5Ke" secondAttribute="bottom" constant="24" id="t5f-4a-fYZ"/>
+                            <constraint firstItem="idX-dl-5Ke" firstAttribute="leading" secondItem="JNF-wb-wwY" secondAttribute="leading" id="sna-o8-lXO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="idX-dl-5Ke" secondAttribute="bottom" constant="44" id="t5f-4a-fYZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="N7S-eF-eD7"/>
+                                <exclude reference="rcu-bU-hKf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
