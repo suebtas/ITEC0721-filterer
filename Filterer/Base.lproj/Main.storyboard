@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPg-yq-mNp">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Qiv-OS-HEF"/>
@@ -35,7 +35,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6B-1F-j0K">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="44"/>
+                                                <rect key="frame" x="120" y="0.0" width="120" height="44"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="9TF-bC-3of"/>
@@ -46,7 +46,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPg-2N-f93">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="44"/>
+                                                <rect key="frame" x="240" y="0.0" width="120" height="44"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="zgf-3k-aR7"/>
@@ -54,7 +54,7 @@
                                                 <state key="normal" image="Compare"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-ry-Zqw">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="44"/>
+                                                <rect key="frame" x="360" y="0.0" width="120" height="44"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="IZl-Nh-MXv"/>
@@ -62,6 +62,17 @@
                                                 <state key="normal" image="Share"/>
                                                 <connections>
                                                     <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdD-sP-cQ3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZ9-ip-zUv">
+                                                <rect key="frame" x="480" y="0.0" width="120" height="44"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="5VS-pe-2hb"/>
+                                                </constraints>
+                                                <state key="normal" title="Share"/>
+                                                <connections>
+                                                    <segue destination="kjb-e3-gdu" kind="presentation" identifier="PresentSocial" id="dfa-HW-c4g"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -164,6 +175,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="388" y="329"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dcM-Fc-E47">
+            <objects>
+                <viewController id="kjb-e3-gdu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPK-ao-9fK"/>
+                        <viewControllerLayoutGuide type="bottom" id="MJF-lj-pf0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2KB-pd-1lH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xN-aB-HTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="337"/>
         </scene>
     </scenes>
     <resources>

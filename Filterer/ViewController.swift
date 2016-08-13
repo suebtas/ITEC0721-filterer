@@ -128,5 +128,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
     
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PresentSocial"{
+            print("x")
+        }
+    }
 }
 
