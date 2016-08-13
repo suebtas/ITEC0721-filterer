@@ -41,7 +41,7 @@ public struct Pixel {
 }
 
 public struct RGBAImage {
-    public var pixels: [Pixel]
+    public var pixels: UnsafeMutableBufferPointer<Pixel>
     
     public var width: Int
     public var height: Int
@@ -64,11 +64,7 @@ public struct RGBAImage {
         guard let imageContext = CGBitmapContextCreate(imageData, width, height, 8, bytesPerRow, colorSpace, bitmapInfo) else { return nil }
         CGContextDrawImage(imageContext, CGRect(origin: CGPointZero, size: image.size), cgImage)
         
-        let bufferPointer = UnsafeMutableBufferPointer<Pixel>(start: imageData, count: width * height)
-        pixels = Array(bufferPointer)
-        
-        imageData.destroy()
-        imageData.dealloc(width * height)
+        pixels = UnsafeMutableBufferPointer<Pixel>(start: imageData, count: width * height)
     }
     
     public func toUIImage() -> UIImage? {
@@ -78,11 +74,7 @@ public struct RGBAImage {
         
         let bytesPerRow = width * 4
         
-        let imageDataReference = UnsafeMutablePointer<Pixel>(pixels)
-        defer {
-            imageDataReference.destroy()
-        }
-        let imageContext = CGBitmapContextCreateWithData(imageDataReference, width, height, 8, bytesPerRow, colorSpace, bitmapInfo, nil, nil)
+        let imageContext = CGBitmapContextCreateWithData(pixels.baseAddress, width, height, 8, bytesPerRow, colorSpace, bitmapInfo, nil, nil)
         
         guard let cgImage = CGBitmapContextCreateImage(imageContext) else {return nil}
         let image = UIImage(CGImage: cgImage)

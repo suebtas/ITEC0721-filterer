@@ -128,5 +128,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
     
     }
+    @IBAction func onFilterRed(sender: AnyObject) {
+        // apply the red filter to the image
+        let filter = FilterRed(intensity: 12.0)
+        
+        if let rgbaImage = RGBAImage(image: imageView.image!) {
+            let filtered = filter.run(rgbaImage)
+            if let image = filtered.toUIImage() {
+                UIView.transitionWithView(imageView,
+                                          duration:1,
+                                          options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                          animations: { self.imageView.image = image},
+                                          completion: nil)
+            }
+        }
+    }
 }
 
