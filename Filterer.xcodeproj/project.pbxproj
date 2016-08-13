@@ -14,6 +14,7 @@
 		4DC199A21BB201E100AA75E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC199A01BB201E100AA75E7 /* LaunchScreen.storyboard */; };
 		4DC199AA1BB2049F00AA75E7 /* RGBAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */; };
 		B50107B81D5F41AF0031A208 /* FilterRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50107B71D5F41AF0031A208 /* FilterRed.swift */; };
+		B50107BA1D5F56D10031A208 /* FilterGrayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50107B91D5F56D10031A208 /* FilterGrayscale.swift */; };
 		B58D4A481D567173006DA7B3 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D4A471D567173006DA7B3 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		4DC199A31BB201E100AA75E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
 		B50107B71D5F41AF0031A208 /* FilterRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterRed.swift; path = ../FilterRed.swift; sourceTree = "<group>"; };
+		B50107B91D5F56D10031A208 /* FilterGrayscale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterGrayscale.swift; path = ../FilterGrayscale.swift; sourceTree = "<group>"; };
 		B58D4A471D567173006DA7B3 /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		4DC199961BB201E100AA75E7 /* Filterer */ = {
 			isa = PBXGroup;
 			children = (
+				B50107B91D5F56D10031A208 /* FilterGrayscale.swift */,
 				B50107B71D5F41AF0031A208 /* FilterRed.swift */,
 				4DC199971BB201E100AA75E7 /* AppDelegate.swift */,
 				4DC199991BB201E100AA75E7 /* ViewController.swift */,
@@ -148,6 +151,7 @@
 				4DC199AA1BB2049F00AA75E7 /* RGBAImage.swift in Sources */,
 				4DC199981BB201E100AA75E7 /* AppDelegate.swift in Sources */,
 				B58D4A481D567173006DA7B3 /* PhotoView.swift in Sources */,
+				B50107BA1D5F56D10031A208 /* FilterGrayscale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

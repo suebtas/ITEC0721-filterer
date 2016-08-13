@@ -143,5 +143,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+    @IBAction func onFilterGrayscale(sender: AnyObject) {
+        let filter = FilterGrayscale(intensity: 12.0)
+        if let rgbaImage = RGBAImage(image: imageView.image!) {
+            let filtered = filter.run(rgbaImage)
+            if let image = filtered.toUIImage() {
+                UIView.transitionWithView(imageView,
+                                          duration:1,
+                                          options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                          animations: { self.imageView.image = image},
+                                          completion: nil)
+            }
+        }
+
+    }
 }
 
