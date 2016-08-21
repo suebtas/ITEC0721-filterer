@@ -24,6 +24,7 @@
 		4DC199A11BB201E100AA75E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC199A31BB201E100AA75E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
+		B5CA13111D69A20000FC61BD /* NSURLSession.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSURLSession.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC199971BB201E100AA75E7 /* AppDelegate.swift */,
+				B5CA13111D69A20000FC61BD /* NSURLSession.playground */,
 				4DC199991BB201E100AA75E7 /* ViewController.swift */,
 				4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */,
 				4DC1999B1BB201E100AA75E7 /* Main.storyboard */,
