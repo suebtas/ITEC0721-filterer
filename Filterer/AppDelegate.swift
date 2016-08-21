@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        NSUserDefaults.standardUserDefaults().registerDefaults(["PhotoFeedURLString": "http://api.flickr.com/services/feeds/photos_public.gne?tags=Kitten&format=json&nojsoncallback=1"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["PhotoFeedURLString": "https://api.flickr.com/services/feeds/photos_public.gne?tags=Kitten&format=json&nojsoncallback=1"])
         return true
     }
 
@@ -32,14 +32,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        let urlString = NSUserDefaults.standardUserDefaults().objectForKey("PhotoFeedURLString")
+        /*let urlString = NSUserDefaults.standardUserDefaults().objectForKey("PhotoFeedURLString")
         print(urlString)
+        
+        guard let foundURLString = urlString else {
+            return
+        }
+        
+        if let url = NSURL(string: foundURLString as! String) {
+            self.updateFeed(url, completion: { (feed) -> Void in
+                let viewController = application.windows[0].rootViewController as? ImageFeedTableViewController
+                viewController?.feed = feed
+            })
+        }
+         */
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    func updateFeed(url: NSURL, completion: (feed: Feed?) -> Void) {
+        
+        let request = NSURLRequest(URL: url)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+            if error == nil && data != nil {
+                let feed = Feed(data: data!, sourceURL: url)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    completion(feed: feed)
+                })
+            }
+            
+        }
+        
+        task.resume()
+ 
+        
+        let dataFile = NSBundle.mainBundle().URLForResource("photos_public.gne", withExtension: ".js")!
+        let data = NSData(contentsOfURL: dataFile)!
+        let feed = Feed(data: data, sourceURL: url)
+        completion(feed: feed)
+        
+    }
 }
 
