@@ -103,8 +103,7 @@ if let url = NSURL(string: "https://api.flickr.com/services/feeds/photos_public.
     
     updateFeed(url, completion: { (feed) -> Void in
         var sss:Feed  = feed!
-        print(sss.items)
-        
+        print(sss)
         
     })
 }
